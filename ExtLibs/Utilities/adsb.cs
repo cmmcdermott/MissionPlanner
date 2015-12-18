@@ -1018,7 +1018,20 @@ namespace MissionPlanner.Utilities
                 this.Tag = tag;
             }
 
+            public PointLatLngAltHdg(double lat, double lng, double alt, float heading, float Hor_velocity, string tag)
+            {
+                this.Lat = lat;
+                this.Lng = lng;
+                this.Alt = alt;
+                this.Heading = heading;
+                this.Hor_velocity = Hor_velocity;
+                this.Tag = tag;
+            }
+
+
+
             public float Heading { get; set; }
+            public float Hor_velocity { get; set; }
 
             //public static implicit operator PointLatLngAltHdg(PointLatLngAlt a)
             //{
