@@ -1295,7 +1295,7 @@ namespace MissionPlanner.GCSViews
                                 if (((DateTime) MainV2.instance.adsbPlaneAge[plla.Tag]) > DateTime.Now.AddSeconds(-30))
                                     routes.Markers.Add(new GMapMarkerADSBPlane(plla, plla.Heading)
                                     {
-                                        ToolTipText = "ICAO: " + plla.Tag + " " + plla.Alt.ToString("0"),
+                                        ToolTipText = "ICAO: " + plla.Tag + " ALT:" + plla.Alt.ToString("0") + " HEAD:" + plla.Heading.ToString("0") + " KPH:" + plla.Hor_velocity.ToString("0"),
                                         ToolTipMode = MarkerTooltipMode.OnMouseOver
                                     });
                             }
