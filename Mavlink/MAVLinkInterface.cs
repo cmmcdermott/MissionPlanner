@@ -2738,28 +2738,6 @@ Please check the following
                         if (buffer[5] == (byte)MAVLink.MAVLINK_MSG_ID.ADSB_VEHICLE)
                         {
                             var adsb = buffer.ByteArrayToStructure<MAVLink.mavlink_adsb_vehicle_t>(6);
-                            log.Info("!!!MAVLINK_MSG_ID.ADSB_VEHICLE Found!!!!");
-                            log.InfoFormat("\n adsb.ICAO_address {0:X4}", adsb.ICAO_address);
-                            log.Info("adsb.lat " + adsb.lat);
-                            log.Info("adsb.lon " + adsb.lon);
-                            log.Info("adsb.altitude " + adsb.altitude);
-                            log.Info("adsb.heading " + adsb.heading);
-                            log.Info("adsb.hor_velocity " + adsb.hor_velocity);
-                            log.Info("adsb.ver_velocity " + adsb.ver_velocity);
-                            log.InfoFormat("adsb.flags {0:X}", adsb.flags);
-                            log.InfoFormat("adsb.squawk {0:X}", adsb.squawk);
-                            log.InfoFormat("adsb.altitude_type {0:X}", adsb.altitude_type);
-                            log.InfoFormat("adsb.callsign0 {0:X}", adsb.callsign[0]);
-                            log.InfoFormat("adsb.callsign1 {0:X}", adsb.callsign[1]);
-                            log.InfoFormat("adsb.callsign2 {0:X}", adsb.callsign[2]);
-                            log.InfoFormat("adsb.callsign3 {0:X}", adsb.callsign[3]);
-                            log.InfoFormat("adsb.callsign4 {0:X}", adsb.callsign[4]);
-                            log.InfoFormat("adsb.callsign5 {0:X}", adsb.callsign[5]);
-                            log.InfoFormat("adsb.callsign6 {0:X}", adsb.callsign[6]);
-                            log.InfoFormat("adsb.callsign7 {0:X}", adsb.callsign[7]);
-                            log.InfoFormat("adsb.callsign8 {0:X}", adsb.callsign[8]);
-                            log.InfoFormat("adsb.emitter_type {0:X} ", adsb.emitter_type);
-                            log.Info("adsb.tslc " + adsb.tslc);
                             if (((UInt16)MAVLink.ADSB_FLAGS.VALID_COORDS & adsb.flags) == (UInt16)MAVLink.ADSB_FLAGS.VALID_COORDS)
                             {
                                 if (((UInt16)MAVLink.ADSB_FLAGS.VALID_HEADING & adsb.flags) == (UInt16)MAVLink.ADSB_FLAGS.VALID_HEADING)
